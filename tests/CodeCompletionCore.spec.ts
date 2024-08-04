@@ -528,65 +528,6 @@ describe("Code Completion Tests", () => {
     });
 
     describe("Simple expression parser:", () => {
-        it("Most simple setup", () => {
-            // No customization happens here, so the c3 engine only returns lexer tokens.
-            const inputStream = CharStream.fromString("var c = a + b()");
-            const lexer = new ExprLexer(inputStream);
-            const tokenStream = new CommonTokenStream(lexer);
-
-            const parser = new ExprParser(tokenStream);
-            const errorListener = new TestErrorListener();
-            parser.addErrorListener(errorListener);
-            parser.expression();
-            expect(errorListener.errorCount).toEqual(0);
-
-            const core = new CodeCompletionCore(parser);
-
-            // 1) At the input start.
-            let candidates = core.collectCandidates(0);
-
-            expect(candidates.tokens.size).toEqual(3);
-            expect(candidates.tokens.has(ExprLexer.VAR)).toEqual(true);
-            expect(candidates.tokens.has(ExprLexer.LET)).toEqual(true);
-            expect(candidates.tokens.has(ExprLexer.ID)).toEqual(true);
-
-            expect(candidates.tokens.get(ExprLexer.VAR)).toEqual([ExprLexer.ID, ExprLexer.EQUAL]);
-            expect(candidates.tokens.get(ExprLexer.LET)).toEqual([ExprLexer.ID, ExprLexer.EQUAL]);
-            expect(candidates.tokens.get(ExprLexer.ID)).toEqual([]);
-
-            // 2) On the first whitespace. In real implementations you would do some additional checks where in the
-            //    whitespace the caret is, as the outcome is different depending on that position.
-            candidates = core.collectCandidates(1);
-            expect(candidates.tokens.size).toEqual(1);
-            expect(candidates.tokens.has(ExprLexer.ID)).toEqual(true);
-
-            // 3) On the variable name ('c').
-            candidates = core.collectCandidates(2);
-            expect(candidates.tokens.size).toEqual(1);
-            expect(candidates.tokens.has(ExprLexer.ID)).toEqual(true);
-
-            // 4) On the equal sign (ignoring whitespace positions from now on).
-            candidates = core.collectCandidates(4);
-            expect(candidates.tokens.size).toEqual(1);
-            expect(candidates.tokens.has(ExprLexer.EQUAL)).toEqual(true);
-
-            // 5) On the variable reference 'a'. But since we have not configure the c3 engine to return us var refs
-            //    (or function refs for that matter) we only get an ID here.
-            candidates = core.collectCandidates(6);
-            expect(candidates.tokens.size).toEqual(1);
-            expect(candidates.tokens.has(ExprLexer.ID)).toEqual(true);
-
-            // 6) On the '+' operator. Usually you would not show operators as candidates, but we have not set up the
-            //    c3 engine yet to not return them.
-            candidates = core.collectCandidates(8);
-            expect(candidates.tokens.size).toEqual(5);
-            expect(candidates.tokens.has(ExprLexer.PLUS)).toEqual(true);
-            expect(candidates.tokens.has(ExprLexer.MINUS)).toEqual(true);
-            expect(candidates.tokens.has(ExprLexer.MULTIPLY)).toEqual(true);
-            expect(candidates.tokens.has(ExprLexer.DIVIDE)).toEqual(true);
-            expect(candidates.tokens.has(ExprLexer.OPEN_PAR)).toEqual(true);
-        });
-
         it("Typical setup", () => {
             const inputStream = CharStream.fromString("var c = a + b()");
             const lexer = new ExprLexer(inputStream);
@@ -644,6 +585,65 @@ describe("Code Completion Tests", () => {
 
             // Our function rule should start at the ID reference of token 'a'.
             expect(candidates.rules.get(ExprParser.RULE_functionRef)?.startTokenIndex).toEqual(6);
+        });
+
+        it("Most simple setup", () => {
+            // No customization happens here, so the c3 engine only returns lexer tokens.
+            const inputStream = CharStream.fromString("var c = a + b()");
+            const lexer = new ExprLexer(inputStream);
+            const tokenStream = new CommonTokenStream(lexer);
+
+            const parser = new ExprParser(tokenStream);
+            const errorListener = new TestErrorListener();
+            parser.addErrorListener(errorListener);
+            parser.expression();
+            expect(errorListener.errorCount).toEqual(0);
+
+            const core = new CodeCompletionCore(parser);
+
+            // 1) At the input start.
+            let candidates = core.collectCandidates(0);
+
+            expect(candidates.tokens.size).toEqual(3);
+            expect(candidates.tokens.has(ExprLexer.VAR)).toEqual(true);
+            expect(candidates.tokens.has(ExprLexer.LET)).toEqual(true);
+            expect(candidates.tokens.has(ExprLexer.ID)).toEqual(true);
+
+            expect(candidates.tokens.get(ExprLexer.VAR)).toEqual([ExprLexer.ID, ExprLexer.EQUAL]);
+            expect(candidates.tokens.get(ExprLexer.LET)).toEqual([ExprLexer.ID, ExprLexer.EQUAL]);
+            expect(candidates.tokens.get(ExprLexer.ID)).toEqual([]);
+
+            // 2) On the first whitespace. In real implementations you would do some additional checks where in the
+            //    whitespace the caret is, as the outcome is different depending on that position.
+            candidates = core.collectCandidates(1);
+            expect(candidates.tokens.size).toEqual(1);
+            expect(candidates.tokens.has(ExprLexer.ID)).toEqual(true);
+
+            // 3) On the variable name ('c').
+            candidates = core.collectCandidates(2);
+            expect(candidates.tokens.size).toEqual(1);
+            expect(candidates.tokens.has(ExprLexer.ID)).toEqual(true);
+
+            // 4) On the equal sign (ignoring whitespace positions from now on).
+            candidates = core.collectCandidates(4);
+            expect(candidates.tokens.size).toEqual(1);
+            expect(candidates.tokens.has(ExprLexer.EQUAL)).toEqual(true);
+
+            // 5) On the variable reference 'a'. But since we have not configure the c3 engine to return us var refs
+            //    (or function refs for that matter) we only get an ID here.
+            candidates = core.collectCandidates(6);
+            expect(candidates.tokens.size).toEqual(1);
+            expect(candidates.tokens.has(ExprLexer.ID)).toEqual(true);
+
+            // 6) On the '+' operator. Usually you would not show operators as candidates, but we have not set up the
+            //    c3 engine yet to not return them.
+            candidates = core.collectCandidates(8);
+            expect(candidates.tokens.size).toEqual(5);
+            expect(candidates.tokens.has(ExprLexer.PLUS)).toEqual(true);
+            expect(candidates.tokens.has(ExprLexer.MINUS)).toEqual(true);
+            expect(candidates.tokens.has(ExprLexer.MULTIPLY)).toEqual(true);
+            expect(candidates.tokens.has(ExprLexer.DIVIDE)).toEqual(true);
+            expect(candidates.tokens.has(ExprLexer.OPEN_PAR)).toEqual(true);
         });
 
         it("Recursive preferred rule", () => {
