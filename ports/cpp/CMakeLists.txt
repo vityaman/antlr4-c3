@@ -8,8 +8,6 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 include(cmake/CompileOptions.cmake)
 include(cmake/Sanitize.cmake)
 
-set(ANTLR4_TAG 4.13.1)
-
 find_package(Antlr4Cpp REQUIRED)
 
 add_subdirectory(source)
