@@ -110,6 +110,7 @@ CandidatesCollection CodeCompletionCore::collectCandidates(
   tokens = {};
   size_t offset = tokenStartIndex;
   while (true) {
+    std::cout << "get offset = " << offset << std::endl;
     const antlr4::Token* token = tokenStream->get(offset++);
     if (token->getChannel() == antlr4::Token::DEFAULT_CHANNEL) {
       tokens.push_back(token);
@@ -448,6 +449,8 @@ CodeCompletionCore::RuleEndStatus CodeCompletionCore::processRule(  // NOLINT
     return {};
   }
 
+  std::cout << "processRule (" << startState->ruleIndex << ")" << std::endl;
+
   // Start with rule specific handling before going into the ATN walk.
 
   // Check first if we've taken this path with the same input before.
@@ -483,12 +486,18 @@ CodeCompletionCore::RuleEndStatus CodeCompletionCore::processRule(  // NOLINT
   // token list
   const size_t startTokenIndex = tokens[tokenListIndex]->getTokenIndex();
 
+  std::cout << "startTokenIndex = " << startTokenIndex << std::endl;
+
   callStack.push_back({
       .startTokenIndex = startTokenIndex,
       .ruleIndex = startState->ruleIndex,
   });
 
+  std::cout << "tokenListIndex = " << tokenListIndex << std::endl;
+  std::cout << "tokens.size() = " << tokens.size() << std::endl;
+
   if (tokenListIndex >= tokens.size() - 1) {  // At caret?
+    std::cout << "At caret" << std::endl;
     if (preferredRules.contains(startState->ruleIndex)) {
       // No need to go deeper when collecting entries and we reach a rule that
       // we want to collect anyway.
@@ -539,6 +548,8 @@ CodeCompletionCore::RuleEndStatus CodeCompletionCore::processRule(  // NOLINT
 
     return result;
   }
+
+  std::cout << "Not at caret" << std::endl;
 
   // Process the rule if we either could pass it without consuming anything
   // (epsilon transition) or if the current input symbol will be matched

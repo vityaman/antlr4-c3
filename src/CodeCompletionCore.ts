@@ -12,6 +12,20 @@ import {
 
 import { longestCommonPrefix } from "./utils.js";
 
+import * as fs from 'fs';
+import * as util from 'util';
+import { off } from "process";
+
+const logFile = fs.createWriteStream('./logfile.log', { flags: 'a' });
+const logStdout = process.stdout;
+
+console.log = function(...args: any[]) {
+  logFile.write(util.format(...args) + '\n');
+  logStdout.write(util.format(...args) + '\n');
+};
+
+console.error = console.log;
+
 export type TokenList = number[];
 export type RuleList = number[];
 
@@ -179,6 +193,7 @@ export class CodeCompletionCore {
         this.tokens = [];
         let offset = this.tokenStartIndex;
         while (true) {
+            console.log("get offset = " + offset);
             const token = tokenStream.get(offset++);
             if (!token) {
                 break;
@@ -473,6 +488,8 @@ export class CodeCompletionCore {
     private processRule(startState: RuleStartState, tokenListIndex: number, callStack: RuleWithStartTokenList,
         precedence: number, indentation: number): RuleEndStatus {
 
+        console.log("processRule (" + startState.ruleIndex + ")")
+
         // Start with rule specific handling before going into the ATN walk.
 
         // Check first if we've taken this path with the same input before.
@@ -515,12 +532,19 @@ export class CodeCompletionCore {
         // Get the token index where our rule starts from our (possibly filtered) token list
         const startTokenIndex = this.tokens[tokenListIndex].tokenIndex;
 
+        console.log("startTokenIndex = " + startTokenIndex);
+
         callStack.push({
             startTokenIndex,
             ruleIndex: startState.ruleIndex,
         });
 
+        console.log("tokenListIndex = " + tokenListIndex)
+        console.log("tokens.size() = " + this.tokens.length)
+
         if (tokenListIndex >= this.tokens.length - 1) { // At caret?
+            console.log("At caret");
+
             if (this.preferredRules.has(startState.ruleIndex)) {
                 // No need to go deeper when collecting entries and we reach a rule that we want to collect anyway.
                 this.translateStackToRuleIndex(callStack);
@@ -571,6 +595,7 @@ export class CodeCompletionCore {
             return result;
 
         } else {
+            console.log("Not at caret");
             // Process the rule if we either could pass it without consuming anything (epsilon transition)
             // or if the current input symbol will be matched somewhere after this entry point.
             // Otherwise stop here.

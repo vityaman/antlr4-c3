@@ -18,9 +18,10 @@ import { CPP14Parser } from "./generated/CPP14Parser";
 import { CPP14Lexer } from "./generated/CPP14Lexer";
 import { WhiteboxParser } from "./generated/WhiteboxParser";
 import { WhiteboxLexer } from "./generated/WhiteboxLexer";
-
 import { ExprLexer } from "./generated/ExprLexer";
 import { ExprParser } from "./generated/ExprParser";
+import { YQLParser } from "./generated/YQLParser";
+import { YQLLexer } from "./generated/YQLLexer";
 import { CodeCompletionCore } from "../src/CodeCompletionCore";
 
 export class TestErrorListener extends BaseErrorListener {
@@ -34,6 +35,28 @@ export class TestErrorListener extends BaseErrorListener {
 }
 
 describe("Code Completion Tests", () => {
+    describe("YQL grammar tests:", () => {
+        it("Blank", () => {
+            const inputStream = CharStream.fromString("SELECT * FROM ");
+            const lexer = new YQLLexer(inputStream);
+            const tokenStream = new CommonTokenStream(lexer);
+
+            const parser = new YQLParser(tokenStream);
+            const errorListener = new TestErrorListener();
+            parser.removeErrorListeners();
+            parser.addErrorListener(errorListener);
+
+            parser.sql_query();
+            const core = new CodeCompletionCore(parser);
+            core.debugOutputWithTransitions = false;
+            core.showDebugOutput = false;
+            core.showResult = true;
+
+            const candidates = core.collectCandidates(1);
+            expect(candidates.tokens.size).toEqual(34)
+        });
+    });
+
     describe("Whitebox grammar tests:", () => {
 
         // Whitespace tokens are skipped
