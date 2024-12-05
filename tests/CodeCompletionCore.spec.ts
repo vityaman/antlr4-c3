@@ -729,34 +729,34 @@ describe("Code Completion Tests", () => {
         });
     });
 
-    // describe("YQL Parser:", () => {
-    //     it("Candidates after select", () => {
-    //         const source = "SELECT "
+    describe("YQL Parser:", () => {
+        it("Candidates after select", () => {
+            const source = "SELECT "
 
-    //         const inputStream = CharStream.fromString(source);
-    //         const lexer = new YQLLexer(inputStream);
-    //         const tokenStream = new CommonTokenStream(lexer);
-    //         const parser = new YQLParser(tokenStream);
+            const inputStream = CharStream.fromString(source);
+            const lexer = new YQLLexer(inputStream);
+            const tokenStream = new CommonTokenStream(lexer);
+            const parser = new YQLParser(tokenStream);
 
-    //         const core = new CodeCompletionCore(parser);
+            const core = new CodeCompletionCore(parser);
 
-    //         core.showResult = true;
-    //         core.showDebugOutput = true;
-    //         core.debugOutputWithTransitions = true;
-    //         core.showRuleStack = true;
+            core.showResult = true;
+            core.showDebugOutput = true;
+            core.debugOutputWithTransitions = true;
+            core.showRuleStack = true;
 
-    //         const vocabulary = lexer.vocabulary;
-    //         for (let type = 1; type <= vocabulary.getMaxTokenType(); ++type) {
-    //             if (YQLLexer.ABORT <= type && type <= YQLLexer.XOR) {
-    //                 continue;
-    //             }
-    //             core.ignoredTokens.add(type);
-    //         }
+            const vocabulary = lexer.vocabulary;
+            for (let type = 1; type <= vocabulary.getMaxTokenType(); ++type) {
+                if (YQLLexer.ABORT <= type && type <= YQLLexer.XOR) {
+                    continue;
+                }
+                core.ignoredTokens.add(type);
+            }
 
-    //         tokenStream.fill();
+            tokenStream.fill();
 
-    //         const candidates = core.collectCandidates(1);
-    //         expect(candidates.tokens.size).toEqual(281);
-    //     });
-    // });
+            const candidates = core.collectCandidates(1);
+            expect(candidates.tokens.size).toEqual(281);
+        });
+    });
 });
