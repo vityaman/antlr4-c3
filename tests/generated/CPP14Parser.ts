@@ -9,149 +9,148 @@ type int = number;
 
 
 export class CPP14Parser extends antlr.Parser {
-    public static readonly T__0 = 1;
-    public static readonly MultiLineMacro = 2;
-    public static readonly Directive = 3;
-    public static readonly Alignas = 4;
-    public static readonly Alignof = 5;
-    public static readonly Asm = 6;
-    public static readonly Auto = 7;
-    public static readonly Bool = 8;
-    public static readonly Break = 9;
-    public static readonly Case = 10;
-    public static readonly Catch = 11;
-    public static readonly Char = 12;
-    public static readonly Char16 = 13;
-    public static readonly Char32 = 14;
-    public static readonly Class = 15;
-    public static readonly Const = 16;
-    public static readonly Constexpr = 17;
-    public static readonly Const_cast = 18;
-    public static readonly Continue = 19;
-    public static readonly Decltype = 20;
-    public static readonly Default = 21;
-    public static readonly Delete = 22;
-    public static readonly Do = 23;
-    public static readonly Double = 24;
-    public static readonly Dynamic_cast = 25;
-    public static readonly Else = 26;
-    public static readonly Enum = 27;
-    public static readonly Explicit = 28;
-    public static readonly Export = 29;
-    public static readonly Extern = 30;
-    public static readonly False = 31;
-    public static readonly Final = 32;
-    public static readonly Float = 33;
-    public static readonly For = 34;
-    public static readonly Friend = 35;
-    public static readonly Goto = 36;
-    public static readonly If = 37;
-    public static readonly Inline = 38;
-    public static readonly Int = 39;
-    public static readonly Long = 40;
-    public static readonly Mutable = 41;
-    public static readonly Namespace = 42;
-    public static readonly New = 43;
-    public static readonly Noexcept = 44;
-    public static readonly Nullptr = 45;
-    public static readonly Operator = 46;
-    public static readonly Override = 47;
-    public static readonly Private = 48;
-    public static readonly Protected = 49;
-    public static readonly Public = 50;
-    public static readonly Register = 51;
-    public static readonly Reinterpret_cast = 52;
-    public static readonly Return = 53;
-    public static readonly Short = 54;
-    public static readonly Signed = 55;
-    public static readonly Sizeof = 56;
-    public static readonly Static = 57;
-    public static readonly Static_assert = 58;
-    public static readonly Static_cast = 59;
-    public static readonly Struct = 60;
-    public static readonly Switch = 61;
-    public static readonly Template = 62;
-    public static readonly This = 63;
-    public static readonly Thread_local = 64;
-    public static readonly Throw = 65;
-    public static readonly True = 66;
-    public static readonly Try = 67;
-    public static readonly Typedef = 68;
-    public static readonly Typeid = 69;
-    public static readonly Typename = 70;
-    public static readonly Union = 71;
-    public static readonly Unsigned = 72;
-    public static readonly Using = 73;
-    public static readonly Virtual = 74;
-    public static readonly Void = 75;
-    public static readonly Volatile = 76;
-    public static readonly Wchar = 77;
-    public static readonly While = 78;
-    public static readonly LeftParen = 79;
-    public static readonly RightParen = 80;
-    public static readonly LeftBracket = 81;
-    public static readonly RightBracket = 82;
-    public static readonly LeftBrace = 83;
-    public static readonly RightBrace = 84;
-    public static readonly Plus = 85;
-    public static readonly Minus = 86;
-    public static readonly Star = 87;
-    public static readonly Div = 88;
-    public static readonly Mod = 89;
-    public static readonly Caret = 90;
-    public static readonly And = 91;
-    public static readonly Or = 92;
-    public static readonly Tilde = 93;
-    public static readonly Not = 94;
-    public static readonly Assign = 95;
-    public static readonly Less = 96;
-    public static readonly Greater = 97;
-    public static readonly PlusAssign = 98;
-    public static readonly MinusAssign = 99;
-    public static readonly StarAssign = 100;
-    public static readonly DivAssign = 101;
-    public static readonly ModAssign = 102;
-    public static readonly XorAssign = 103;
-    public static readonly AndAssign = 104;
-    public static readonly OrAssign = 105;
-    public static readonly LeftShift = 106;
-    public static readonly LeftShiftAssign = 107;
-    public static readonly Equal = 108;
-    public static readonly NotEqual = 109;
-    public static readonly LessEqual = 110;
-    public static readonly GreaterEqual = 111;
-    public static readonly AndAnd = 112;
-    public static readonly OrOr = 113;
-    public static readonly PlusPlus = 114;
-    public static readonly MinusMinus = 115;
-    public static readonly Comma = 116;
-    public static readonly ArrowStar = 117;
-    public static readonly Arrow = 118;
-    public static readonly Question = 119;
-    public static readonly Colon = 120;
-    public static readonly Doublecolon = 121;
-    public static readonly Semi = 122;
-    public static readonly Dot = 123;
-    public static readonly DotStar = 124;
-    public static readonly Ellipsis = 125;
-    public static readonly Identifier = 126;
-    public static readonly Integerliteral = 127;
-    public static readonly Decimalliteral = 128;
-    public static readonly Octalliteral = 129;
-    public static readonly Hexadecimalliteral = 130;
-    public static readonly Binaryliteral = 131;
-    public static readonly Integersuffix = 132;
-    public static readonly Characterliteral = 133;
-    public static readonly Floatingliteral = 134;
-    public static readonly Stringliteral = 135;
-    public static readonly Userdefinedintegerliteral = 136;
-    public static readonly Userdefinedfloatingliteral = 137;
-    public static readonly Userdefinedstringliteral = 138;
-    public static readonly Userdefinedcharacterliteral = 139;
-    public static readonly Whitespace = 140;
-    public static readonly Newline = 141;
-    public static readonly BlockComment = 142;
-    public static readonly LineComment = 143;
+    public static readonly MultiLineMacro = 1;
+    public static readonly Directive = 2;
+    public static readonly Alignas = 3;
+    public static readonly Alignof = 4;
+    public static readonly Asm = 5;
+    public static readonly Auto = 6;
+    public static readonly Bool = 7;
+    public static readonly Break = 8;
+    public static readonly Case = 9;
+    public static readonly Catch = 10;
+    public static readonly Char = 11;
+    public static readonly Char16 = 12;
+    public static readonly Char32 = 13;
+    public static readonly Class = 14;
+    public static readonly Const = 15;
+    public static readonly Constexpr = 16;
+    public static readonly Const_cast = 17;
+    public static readonly Continue = 18;
+    public static readonly Decltype = 19;
+    public static readonly Default = 20;
+    public static readonly Delete = 21;
+    public static readonly Do = 22;
+    public static readonly Double = 23;
+    public static readonly Dynamic_cast = 24;
+    public static readonly Else = 25;
+    public static readonly Enum = 26;
+    public static readonly Explicit = 27;
+    public static readonly Export = 28;
+    public static readonly Extern = 29;
+    public static readonly False = 30;
+    public static readonly Final = 31;
+    public static readonly Float = 32;
+    public static readonly For = 33;
+    public static readonly Friend = 34;
+    public static readonly Goto = 35;
+    public static readonly If = 36;
+    public static readonly Inline = 37;
+    public static readonly Int = 38;
+    public static readonly Long = 39;
+    public static readonly Mutable = 40;
+    public static readonly Namespace = 41;
+    public static readonly New = 42;
+    public static readonly Noexcept = 43;
+    public static readonly Nullptr = 44;
+    public static readonly Operator = 45;
+    public static readonly Override = 46;
+    public static readonly Private = 47;
+    public static readonly Protected = 48;
+    public static readonly Public = 49;
+    public static readonly Register = 50;
+    public static readonly Reinterpret_cast = 51;
+    public static readonly Return = 52;
+    public static readonly Short = 53;
+    public static readonly Signed = 54;
+    public static readonly Sizeof = 55;
+    public static readonly Static = 56;
+    public static readonly Static_assert = 57;
+    public static readonly Static_cast = 58;
+    public static readonly Struct = 59;
+    public static readonly Switch = 60;
+    public static readonly Template = 61;
+    public static readonly This = 62;
+    public static readonly Thread_local = 63;
+    public static readonly Throw = 64;
+    public static readonly True = 65;
+    public static readonly Try = 66;
+    public static readonly Typedef = 67;
+    public static readonly Typeid = 68;
+    public static readonly Typename = 69;
+    public static readonly Union = 70;
+    public static readonly Unsigned = 71;
+    public static readonly Using = 72;
+    public static readonly Virtual = 73;
+    public static readonly Void = 74;
+    public static readonly Volatile = 75;
+    public static readonly Wchar = 76;
+    public static readonly While = 77;
+    public static readonly LeftParen = 78;
+    public static readonly RightParen = 79;
+    public static readonly LeftBracket = 80;
+    public static readonly RightBracket = 81;
+    public static readonly LeftBrace = 82;
+    public static readonly RightBrace = 83;
+    public static readonly Plus = 84;
+    public static readonly Minus = 85;
+    public static readonly Star = 86;
+    public static readonly Div = 87;
+    public static readonly Mod = 88;
+    public static readonly Caret = 89;
+    public static readonly And = 90;
+    public static readonly Or = 91;
+    public static readonly Tilde = 92;
+    public static readonly Not = 93;
+    public static readonly Assign = 94;
+    public static readonly Less = 95;
+    public static readonly Greater = 96;
+    public static readonly PlusAssign = 97;
+    public static readonly MinusAssign = 98;
+    public static readonly StarAssign = 99;
+    public static readonly DivAssign = 100;
+    public static readonly ModAssign = 101;
+    public static readonly XorAssign = 102;
+    public static readonly AndAssign = 103;
+    public static readonly OrAssign = 104;
+    public static readonly LeftShift = 105;
+    public static readonly LeftShiftAssign = 106;
+    public static readonly Equal = 107;
+    public static readonly NotEqual = 108;
+    public static readonly LessEqual = 109;
+    public static readonly GreaterEqual = 110;
+    public static readonly AndAnd = 111;
+    public static readonly OrOr = 112;
+    public static readonly PlusPlus = 113;
+    public static readonly MinusMinus = 114;
+    public static readonly Comma = 115;
+    public static readonly ArrowStar = 116;
+    public static readonly Arrow = 117;
+    public static readonly Question = 118;
+    public static readonly Colon = 119;
+    public static readonly Doublecolon = 120;
+    public static readonly Semi = 121;
+    public static readonly Dot = 122;
+    public static readonly DotStar = 123;
+    public static readonly Ellipsis = 124;
+    public static readonly Identifier = 125;
+    public static readonly Integerliteral = 126;
+    public static readonly Decimalliteral = 127;
+    public static readonly Octalliteral = 128;
+    public static readonly Hexadecimalliteral = 129;
+    public static readonly Binaryliteral = 130;
+    public static readonly Integersuffix = 131;
+    public static readonly Characterliteral = 132;
+    public static readonly Floatingliteral = 133;
+    public static readonly Stringliteral = 134;
+    public static readonly Userdefinedintegerliteral = 135;
+    public static readonly Userdefinedfloatingliteral = 136;
+    public static readonly Userdefinedstringliteral = 137;
+    public static readonly Userdefinedcharacterliteral = 138;
+    public static readonly Whitespace = 139;
+    public static readonly Newline = 140;
+    public static readonly BlockComment = 141;
+    public static readonly LineComment = 142;
     public static readonly RULE_translationunit = 0;
     public static readonly RULE_primaryexpression = 1;
     public static readonly RULE_idexpression = 2;
@@ -352,53 +351,53 @@ export class CPP14Parser extends antlr.Parser {
     public static readonly RULE_userdefinedliteral = 197;
 
     public static readonly literalNames = [
-        null, "'0'", null, null, "'alignas'", "'alignof'", "'asm'", "'auto'", 
-        "'bool'", "'break'", "'case'", "'catch'", "'char'", "'char16_t'", 
-        "'char32_t'", "'class'", "'const'", "'constexpr'", "'const_cast'", 
-        "'continue'", "'decltype'", "'default'", "'delete'", "'do'", "'double'", 
-        "'dynamic_cast'", "'else'", "'enum'", "'explicit'", "'export'", 
-        "'extern'", "'false'", "'final'", "'float'", "'for'", "'friend'", 
-        "'goto'", "'if'", "'inline'", "'int'", "'long'", "'mutable'", "'namespace'", 
-        "'new'", "'noexcept'", "'nullptr'", "'operator'", "'override'", 
-        "'private'", "'protected'", "'public'", "'register'", "'reinterpret_cast'", 
-        "'return'", "'short'", "'signed'", "'sizeof'", "'static'", "'static_assert'", 
-        "'static_cast'", "'struct'", "'switch'", "'template'", "'this'", 
-        "'thread_local'", "'throw'", "'true'", "'try'", "'typedef'", "'typeid'", 
-        "'typename'", "'union'", "'unsigned'", "'using'", "'virtual'", "'void'", 
-        "'volatile'", "'wchar_t'", "'while'", "'('", "')'", "'['", "']'", 
-        "'{'", "'}'", "'+'", "'-'", "'*'", "'/'", "'%'", "'^'", "'&'", "'|'", 
-        "'~'", "'!'", "'='", "'<'", "'>'", "'+='", "'-='", "'*='", "'/='", 
-        "'%='", "'^='", "'&='", "'|='", "'<<'", "'<<='", "'=='", "'!='", 
-        "'<='", "'>='", "'&&'", "'||'", "'++'", "'--'", "','", "'->*'", 
-        "'->'", "'?'", "':'", "'::'", "';'", "'.'", "'.*'", "'...'"
+        null, null, null, "'alignas'", "'alignof'", "'asm'", "'auto'", "'bool'", 
+        "'break'", "'case'", "'catch'", "'char'", "'char16_t'", "'char32_t'", 
+        "'class'", "'const'", "'constexpr'", "'const_cast'", "'continue'", 
+        "'decltype'", "'default'", "'delete'", "'do'", "'double'", "'dynamic_cast'", 
+        "'else'", "'enum'", "'explicit'", "'export'", "'extern'", "'false'", 
+        "'final'", "'float'", "'for'", "'friend'", "'goto'", "'if'", "'inline'", 
+        "'int'", "'long'", "'mutable'", "'namespace'", "'new'", "'noexcept'", 
+        "'nullptr'", "'operator'", "'override'", "'private'", "'protected'", 
+        "'public'", "'register'", "'reinterpret_cast'", "'return'", "'short'", 
+        "'signed'", "'sizeof'", "'static'", "'static_assert'", "'static_cast'", 
+        "'struct'", "'switch'", "'template'", "'this'", "'thread_local'", 
+        "'throw'", "'true'", "'try'", "'typedef'", "'typeid'", "'typename'", 
+        "'union'", "'unsigned'", "'using'", "'virtual'", "'void'", "'volatile'", 
+        "'wchar_t'", "'while'", "'('", "')'", "'['", "']'", "'{'", "'}'", 
+        "'+'", "'-'", "'*'", "'/'", "'%'", "'^'", "'&'", "'|'", "'~'", "'!'", 
+        "'='", "'<'", "'>'", "'+='", "'-='", "'*='", "'/='", "'%='", "'^='", 
+        "'&='", "'|='", "'<<'", "'<<='", "'=='", "'!='", "'<='", "'>='", 
+        "'&&'", "'||'", "'++'", "'--'", "','", "'->*'", "'->'", "'?'", "':'", 
+        "'::'", "';'", "'.'", "'.*'", "'...'"
     ];
 
     public static readonly symbolicNames = [
-        null, null, "MultiLineMacro", "Directive", "Alignas", "Alignof", 
-        "Asm", "Auto", "Bool", "Break", "Case", "Catch", "Char", "Char16", 
-        "Char32", "Class", "Const", "Constexpr", "Const_cast", "Continue", 
-        "Decltype", "Default", "Delete", "Do", "Double", "Dynamic_cast", 
-        "Else", "Enum", "Explicit", "Export", "Extern", "False", "Final", 
-        "Float", "For", "Friend", "Goto", "If", "Inline", "Int", "Long", 
-        "Mutable", "Namespace", "New", "Noexcept", "Nullptr", "Operator", 
-        "Override", "Private", "Protected", "Public", "Register", "Reinterpret_cast", 
-        "Return", "Short", "Signed", "Sizeof", "Static", "Static_assert", 
-        "Static_cast", "Struct", "Switch", "Template", "This", "Thread_local", 
-        "Throw", "True", "Try", "Typedef", "Typeid", "Typename", "Union", 
-        "Unsigned", "Using", "Virtual", "Void", "Volatile", "Wchar", "While", 
-        "LeftParen", "RightParen", "LeftBracket", "RightBracket", "LeftBrace", 
-        "RightBrace", "Plus", "Minus", "Star", "Div", "Mod", "Caret", "And", 
-        "Or", "Tilde", "Not", "Assign", "Less", "Greater", "PlusAssign", 
-        "MinusAssign", "StarAssign", "DivAssign", "ModAssign", "XorAssign", 
-        "AndAssign", "OrAssign", "LeftShift", "LeftShiftAssign", "Equal", 
-        "NotEqual", "LessEqual", "GreaterEqual", "AndAnd", "OrOr", "PlusPlus", 
-        "MinusMinus", "Comma", "ArrowStar", "Arrow", "Question", "Colon", 
-        "Doublecolon", "Semi", "Dot", "DotStar", "Ellipsis", "Identifier", 
-        "Integerliteral", "Decimalliteral", "Octalliteral", "Hexadecimalliteral", 
-        "Binaryliteral", "Integersuffix", "Characterliteral", "Floatingliteral", 
-        "Stringliteral", "Userdefinedintegerliteral", "Userdefinedfloatingliteral", 
-        "Userdefinedstringliteral", "Userdefinedcharacterliteral", "Whitespace", 
-        "Newline", "BlockComment", "LineComment"
+        null, "MultiLineMacro", "Directive", "Alignas", "Alignof", "Asm", 
+        "Auto", "Bool", "Break", "Case", "Catch", "Char", "Char16", "Char32", 
+        "Class", "Const", "Constexpr", "Const_cast", "Continue", "Decltype", 
+        "Default", "Delete", "Do", "Double", "Dynamic_cast", "Else", "Enum", 
+        "Explicit", "Export", "Extern", "False", "Final", "Float", "For", 
+        "Friend", "Goto", "If", "Inline", "Int", "Long", "Mutable", "Namespace", 
+        "New", "Noexcept", "Nullptr", "Operator", "Override", "Private", 
+        "Protected", "Public", "Register", "Reinterpret_cast", "Return", 
+        "Short", "Signed", "Sizeof", "Static", "Static_assert", "Static_cast", 
+        "Struct", "Switch", "Template", "This", "Thread_local", "Throw", 
+        "True", "Try", "Typedef", "Typeid", "Typename", "Union", "Unsigned", 
+        "Using", "Virtual", "Void", "Volatile", "Wchar", "While", "LeftParen", 
+        "RightParen", "LeftBracket", "RightBracket", "LeftBrace", "RightBrace", 
+        "Plus", "Minus", "Star", "Div", "Mod", "Caret", "And", "Or", "Tilde", 
+        "Not", "Assign", "Less", "Greater", "PlusAssign", "MinusAssign", 
+        "StarAssign", "DivAssign", "ModAssign", "XorAssign", "AndAssign", 
+        "OrAssign", "LeftShift", "LeftShiftAssign", "Equal", "NotEqual", 
+        "LessEqual", "GreaterEqual", "AndAnd", "OrOr", "PlusPlus", "MinusMinus", 
+        "Comma", "ArrowStar", "Arrow", "Question", "Colon", "Doublecolon", 
+        "Semi", "Dot", "DotStar", "Ellipsis", "Identifier", "Integerliteral", 
+        "Decimalliteral", "Octalliteral", "Hexadecimalliteral", "Binaryliteral", 
+        "Integersuffix", "Characterliteral", "Floatingliteral", "Stringliteral", 
+        "Userdefinedintegerliteral", "Userdefinedfloatingliteral", "Userdefinedstringliteral", 
+        "Userdefinedcharacterliteral", "Whitespace", "Newline", "BlockComment", 
+        "LineComment"
     ];
     public static readonly ruleNames = [
         "translationunit", "primaryexpression", "idexpression", "unqualifiedid", 
@@ -480,7 +479,7 @@ export class CPP14Parser extends antlr.Parser {
             this.state = 397;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 1494479312) !== 0) || ((((_la - 33)) & ~0x1F) === 0 && ((1 << (_la - 33)) & 2875466725) !== 0) || ((((_la - 68)) & ~0x1F) === 0 && ((1 << (_la - 68)) & 42478589) !== 0) || ((((_la - 112)) & ~0x1F) === 0 && ((1 << (_la - 112)) & 26113) !== 0)) {
+            if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 747239656) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 2875466725) !== 0) || ((((_la - 67)) & ~0x1F) === 0 && ((1 << (_la - 67)) & 42478589) !== 0) || ((((_la - 111)) & ~0x1F) === 0 && ((1 << (_la - 111)) & 26113) !== 0)) {
                 {
                 this.state = 396;
                 this.declarationseq(0);
@@ -704,7 +703,7 @@ export class CPP14Parser extends antlr.Parser {
             this.state = 428;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if (_la === 62) {
+            if (_la === 61) {
                 {
                 this.state = 427;
                 this.match(CPP14Parser.Template);
@@ -820,7 +819,7 @@ export class CPP14Parser extends antlr.Parser {
                         this.state = 450;
                         this.errorHandler.sync(this);
                         _la = this.tokenStream.LA(1);
-                        if (_la === 62) {
+                        if (_la === 61) {
                             {
                             this.state = 449;
                             this.match(CPP14Parser.Template);
@@ -867,7 +866,7 @@ export class CPP14Parser extends antlr.Parser {
             this.state = 462;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if (_la === 79) {
+            if (_la === 78) {
                 {
                 this.state = 461;
                 this.lambdadeclarator();
@@ -903,7 +902,7 @@ export class CPP14Parser extends antlr.Parser {
             this.state = 468;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if (_la === 63 || _la === 91 || _la === 95 || _la === 126) {
+            if (_la === 62 || _la === 90 || _la === 94 || _la === 125) {
                 {
                 this.state = 467;
                 this.lambdacapture();
@@ -983,7 +982,7 @@ export class CPP14Parser extends antlr.Parser {
             {
             this.state = 480;
             _la = this.tokenStream.LA(1);
-            if(!(_la === 91 || _la === 95)) {
+            if(!(_la === 90 || _la === 94)) {
             this.errorHandler.recoverInline(this);
             }
             else {
@@ -1234,7 +1233,7 @@ export class CPP14Parser extends antlr.Parser {
             this.state = 519;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if (_la === 41) {
+            if (_la === 40) {
                 {
                 this.state = 518;
                 this.match(CPP14Parser.Mutable);
@@ -1244,7 +1243,7 @@ export class CPP14Parser extends antlr.Parser {
             this.state = 522;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if (_la === 44 || _la === 65) {
+            if (_la === 43 || _la === 64) {
                 {
                 this.state = 521;
                 this.exceptionspecification();
@@ -1254,7 +1253,7 @@ export class CPP14Parser extends antlr.Parser {
             this.state = 525;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if (_la === 4 || _la === 81) {
+            if (_la === 3 || _la === 80) {
                 {
                 this.state = 524;
                 this.attributespecifierseq(0);
@@ -1264,7 +1263,7 @@ export class CPP14Parser extends antlr.Parser {
             this.state = 528;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if (_la === 118) {
+            if (_la === 117) {
                 {
                 this.state = 527;
                 this.trailingreturntype();
@@ -1323,7 +1322,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 535;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 2203349408) !== 0) || ((((_la - 33)) & ~0x1F) === 0 && ((1 << (_la - 33)) & 1156070593) !== 0) || ((((_la - 65)) & ~0x1F) === 0 && ((1 << (_la - 65)) & 1014322355) !== 0) || ((((_la - 114)) & ~0x1F) === 0 && ((1 << (_la - 114)) & 66596995) !== 0)) {
+                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 1101674704) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 1156070593) !== 0) || ((((_la - 64)) & ~0x1F) === 0 && ((1 << (_la - 64)) & 1014322355) !== 0) || ((((_la - 113)) & ~0x1F) === 0 && ((1 << (_la - 113)) & 66596995) !== 0)) {
                     {
                     this.state = 534;
                     this.expressionlist();
@@ -1343,7 +1342,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 542;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 2203349408) !== 0) || ((((_la - 33)) & ~0x1F) === 0 && ((1 << (_la - 33)) & 1156070593) !== 0) || ((((_la - 65)) & ~0x1F) === 0 && ((1 << (_la - 65)) & 1014322355) !== 0) || ((((_la - 114)) & ~0x1F) === 0 && ((1 << (_la - 114)) & 66596995) !== 0)) {
+                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 1101674704) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 1156070593) !== 0) || ((((_la - 64)) & ~0x1F) === 0 && ((1 << (_la - 64)) & 1014322355) !== 0) || ((((_la - 113)) & ~0x1F) === 0 && ((1 << (_la - 113)) & 66596995) !== 0)) {
                     {
                     this.state = 541;
                     this.expressionlist();
@@ -1526,7 +1525,7 @@ export class CPP14Parser extends antlr.Parser {
                         this.state = 609;
                         this.errorHandler.sync(this);
                         _la = this.tokenStream.LA(1);
-                        if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 2203349408) !== 0) || ((((_la - 33)) & ~0x1F) === 0 && ((1 << (_la - 33)) & 1156070593) !== 0) || ((((_la - 65)) & ~0x1F) === 0 && ((1 << (_la - 65)) & 1014322355) !== 0) || ((((_la - 114)) & ~0x1F) === 0 && ((1 << (_la - 114)) & 66596995) !== 0)) {
+                        if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 1101674704) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 1156070593) !== 0) || ((((_la - 64)) & ~0x1F) === 0 && ((1 << (_la - 64)) & 1014322355) !== 0) || ((((_la - 113)) & ~0x1F) === 0 && ((1 << (_la - 113)) & 66596995) !== 0)) {
                             {
                             this.state = 608;
                             this.expressionlist();
@@ -1550,7 +1549,7 @@ export class CPP14Parser extends antlr.Parser {
                         this.state = 615;
                         this.errorHandler.sync(this);
                         _la = this.tokenStream.LA(1);
-                        if (_la === 62) {
+                        if (_la === 61) {
                             {
                             this.state = 614;
                             this.match(CPP14Parser.Template);
@@ -1574,7 +1573,7 @@ export class CPP14Parser extends antlr.Parser {
                         this.state = 621;
                         this.errorHandler.sync(this);
                         _la = this.tokenStream.LA(1);
-                        if (_la === 62) {
+                        if (_la === 61) {
                             {
                             this.state = 620;
                             this.match(CPP14Parser.Template);
@@ -1736,7 +1735,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 657;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 20 || _la === 121 || _la === 126) {
+                if (_la === 19 || _la === 120 || _la === 125) {
                     {
                     this.state = 656;
                     this.nestednamespecifier(0);
@@ -1909,7 +1908,7 @@ export class CPP14Parser extends antlr.Parser {
             {
             this.state = 695;
             _la = this.tokenStream.LA(1);
-            if(!(((((_la - 85)) & ~0x1F) === 0 && ((1 << (_la - 85)) & 967) !== 0))) {
+            if(!(((((_la - 84)) & ~0x1F) === 0 && ((1 << (_la - 84)) & 967) !== 0))) {
             this.errorHandler.recoverInline(this);
             }
             else {
@@ -1945,7 +1944,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 698;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 121) {
+                if (_la === 120) {
                     {
                     this.state = 697;
                     this.match(CPP14Parser.Doublecolon);
@@ -1957,7 +1956,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 702;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 79) {
+                if (_la === 78) {
                     {
                     this.state = 701;
                     this.newplacement();
@@ -1984,7 +1983,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 709;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 121) {
+                if (_la === 120) {
                     {
                     this.state = 708;
                     this.match(CPP14Parser.Doublecolon);
@@ -2257,7 +2256,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 759;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 2203349408) !== 0) || ((((_la - 33)) & ~0x1F) === 0 && ((1 << (_la - 33)) & 1156070593) !== 0) || ((((_la - 65)) & ~0x1F) === 0 && ((1 << (_la - 65)) & 1014322355) !== 0) || ((((_la - 114)) & ~0x1F) === 0 && ((1 << (_la - 114)) & 66596995) !== 0)) {
+                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 1101674704) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 1156070593) !== 0) || ((((_la - 64)) & ~0x1F) === 0 && ((1 << (_la - 64)) & 1014322355) !== 0) || ((((_la - 113)) & ~0x1F) === 0 && ((1 << (_la - 113)) & 66596995) !== 0)) {
                     {
                     this.state = 758;
                     this.expressionlist();
@@ -2306,7 +2305,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 766;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 121) {
+                if (_la === 120) {
                     {
                     this.state = 765;
                     this.match(CPP14Parser.Doublecolon);
@@ -2325,7 +2324,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 771;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 121) {
+                if (_la === 120) {
                     {
                     this.state = 770;
                     this.match(CPP14Parser.Doublecolon);
@@ -3635,7 +3634,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 990;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 4 || _la === 81) {
+                if (_la === 3 || _la === 80) {
                     {
                     this.state = 989;
                     this.attributespecifierseq(0);
@@ -3652,7 +3651,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 994;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 4 || _la === 81) {
+                if (_la === 3 || _la === 80) {
                     {
                     this.state = 993;
                     this.attributespecifierseq(0);
@@ -3669,7 +3668,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 998;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 4 || _la === 81) {
+                if (_la === 3 || _la === 80) {
                     {
                     this.state = 997;
                     this.attributespecifierseq(0);
@@ -3686,7 +3685,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1002;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 4 || _la === 81) {
+                if (_la === 3 || _la === 80) {
                     {
                     this.state = 1001;
                     this.attributespecifierseq(0);
@@ -3710,7 +3709,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1007;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 4 || _la === 81) {
+                if (_la === 3 || _la === 80) {
                     {
                     this.state = 1006;
                     this.attributespecifierseq(0);
@@ -3750,7 +3749,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1013;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 4 || _la === 81) {
+                if (_la === 3 || _la === 80) {
                     {
                     this.state = 1012;
                     this.attributespecifierseq(0);
@@ -3771,7 +3770,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1019;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 4 || _la === 81) {
+                if (_la === 3 || _la === 80) {
                     {
                     this.state = 1018;
                     this.attributespecifierseq(0);
@@ -3794,7 +3793,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1027;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 4 || _la === 81) {
+                if (_la === 3 || _la === 80) {
                     {
                     this.state = 1026;
                     this.attributespecifierseq(0);
@@ -3834,7 +3833,7 @@ export class CPP14Parser extends antlr.Parser {
             this.state = 1035;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 2203349408) !== 0) || ((((_la - 33)) & ~0x1F) === 0 && ((1 << (_la - 33)) & 1156070593) !== 0) || ((((_la - 65)) & ~0x1F) === 0 && ((1 << (_la - 65)) & 1014060211) !== 0) || ((((_la - 114)) & ~0x1F) === 0 && ((1 << (_la - 114)) & 66596995) !== 0)) {
+            if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 1101674704) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 1156070593) !== 0) || ((((_la - 64)) & ~0x1F) === 0 && ((1 << (_la - 64)) & 1014060211) !== 0) || ((((_la - 113)) & ~0x1F) === 0 && ((1 << (_la - 113)) & 66596995) !== 0)) {
                 {
                 this.state = 1034;
                 this.expression(0);
@@ -3870,7 +3869,7 @@ export class CPP14Parser extends antlr.Parser {
             this.state = 1041;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 3690985456) !== 0) || ((((_la - 33)) & ~0x1F) === 0 && ((1 << (_la - 33)) & 3757850623) !== 0) || ((((_la - 65)) & ~0x1F) === 0 && ((1 << (_la - 65)) & 1014333439) !== 0) || ((((_la - 112)) & ~0x1F) === 0 && ((1 << (_la - 112)) & 266397197) !== 0)) {
+            if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 1845492728) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 3757850623) !== 0) || ((((_la - 64)) & ~0x1F) === 0 && ((1 << (_la - 64)) & 1014333439) !== 0) || ((((_la - 111)) & ~0x1F) === 0 && ((1 << (_la - 111)) & 266397197) !== 0)) {
                 {
                 this.state = 1040;
                 this.statementseq(0);
@@ -4050,7 +4049,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1079;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 4 || _la === 81) {
+                if (_la === 3 || _la === 80) {
                     {
                     this.state = 1078;
                     this.attributespecifierseq(0);
@@ -4073,7 +4072,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1087;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 4 || _la === 81) {
+                if (_la === 3 || _la === 80) {
                     {
                     this.state = 1086;
                     this.attributespecifierseq(0);
@@ -4157,7 +4156,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1113;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 3679973808) !== 0) || ((((_la - 33)) & ~0x1F) === 0 && ((1 << (_la - 33)) & 3454811621) !== 0) || ((((_la - 65)) & ~0x1F) === 0 && ((1 << (_la - 65)) & 1014062843) !== 0) || ((((_la - 114)) & ~0x1F) === 0 && ((1 << (_la - 114)) & 66596995) !== 0)) {
+                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 1839986904) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 3454811621) !== 0) || ((((_la - 64)) & ~0x1F) === 0 && ((1 << (_la - 64)) & 1014062843) !== 0) || ((((_la - 113)) & ~0x1F) === 0 && ((1 << (_la - 113)) & 66596995) !== 0)) {
                     {
                     this.state = 1112;
                     this.condition();
@@ -4169,7 +4168,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1117;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 2203349408) !== 0) || ((((_la - 33)) & ~0x1F) === 0 && ((1 << (_la - 33)) & 1156070593) !== 0) || ((((_la - 65)) & ~0x1F) === 0 && ((1 << (_la - 65)) & 1014060211) !== 0) || ((((_la - 114)) & ~0x1F) === 0 && ((1 << (_la - 114)) & 66596995) !== 0)) {
+                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 1101674704) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 1156070593) !== 0) || ((((_la - 64)) & ~0x1F) === 0 && ((1 << (_la - 64)) & 1014060211) !== 0) || ((((_la - 113)) & ~0x1F) === 0 && ((1 << (_la - 113)) & 66596995) !== 0)) {
                     {
                     this.state = 1116;
                     this.expression(0);
@@ -4262,7 +4261,7 @@ export class CPP14Parser extends antlr.Parser {
             this.state = 1137;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if (_la === 4 || _la === 81) {
+            if (_la === 3 || _la === 80) {
                 {
                 this.state = 1136;
                 this.attributespecifierseq(0);
@@ -4412,7 +4411,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1152;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 2203349408) !== 0) || ((((_la - 33)) & ~0x1F) === 0 && ((1 << (_la - 33)) & 1156070593) !== 0) || ((((_la - 65)) & ~0x1F) === 0 && ((1 << (_la - 65)) & 1014060211) !== 0) || ((((_la - 114)) & ~0x1F) === 0 && ((1 << (_la - 114)) & 66596995) !== 0)) {
+                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 1101674704) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 1156070593) !== 0) || ((((_la - 64)) & ~0x1F) === 0 && ((1 << (_la - 64)) & 1014060211) !== 0) || ((((_la - 113)) & ~0x1F) === 0 && ((1 << (_la - 113)) & 66596995) !== 0)) {
                     {
                     this.state = 1151;
                     this.expression(0);
@@ -4724,7 +4723,7 @@ export class CPP14Parser extends antlr.Parser {
             this.state = 1200;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if (_la === 4 || _la === 81) {
+            if (_la === 3 || _la === 80) {
                 {
                 this.state = 1199;
                 this.attributespecifierseq(0);
@@ -4818,7 +4817,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1210;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 20 || _la === 46 || ((((_la - 79)) & ~0x1F) === 0 && ((1 << (_la - 79)) & 20737) !== 0) || ((((_la - 112)) & ~0x1F) === 0 && ((1 << (_la - 112)) & 25089) !== 0)) {
+                if (_la === 19 || _la === 45 || ((((_la - 78)) & ~0x1F) === 0 && ((1 << (_la - 78)) & 20737) !== 0) || ((((_la - 111)) & ~0x1F) === 0 && ((1 << (_la - 111)) & 25089) !== 0)) {
                     {
                     this.state = 1209;
                     this.initdeclaratorlist(0);
@@ -5103,7 +5102,7 @@ export class CPP14Parser extends antlr.Parser {
             {
             this.state = 1252;
             _la = this.tokenStream.LA(1);
-            if(!(_la === 30 || ((((_la - 41)) & ~0x1F) === 0 && ((1 << (_la - 41)) & 8455169) !== 0))) {
+            if(!(_la === 29 || ((((_la - 40)) & ~0x1F) === 0 && ((1 << (_la - 40)) & 8455169) !== 0))) {
             this.errorHandler.recoverInline(this);
             }
             else {
@@ -5134,7 +5133,7 @@ export class CPP14Parser extends antlr.Parser {
             {
             this.state = 1254;
             _la = this.tokenStream.LA(1);
-            if(!(_la === 28 || _la === 38 || _la === 74)) {
+            if(!(_la === 27 || _la === 37 || _la === 73)) {
             this.errorHandler.recoverInline(this);
             }
             else {
@@ -5659,7 +5658,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1331;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 4 || _la === 81) {
+                if (_la === 3 || _la === 80) {
                     {
                     this.state = 1330;
                     this.attributespecifierseq(0);
@@ -5699,7 +5698,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1344;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 62) {
+                if (_la === 61) {
                     {
                     this.state = 1343;
                     this.match(CPP14Parser.Template);
@@ -5785,7 +5784,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1360;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 126) {
+                if (_la === 125) {
                     {
                     this.state = 1359;
                     this.enumeratorlist(0);
@@ -5842,7 +5841,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1374;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 4 || _la === 81) {
+                if (_la === 3 || _la === 80) {
                     {
                     this.state = 1373;
                     this.attributespecifierseq(0);
@@ -5852,7 +5851,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1377;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 126) {
+                if (_la === 125) {
                     {
                     this.state = 1376;
                     this.match(CPP14Parser.Identifier);
@@ -5862,7 +5861,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1380;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 120) {
+                if (_la === 119) {
                     {
                     this.state = 1379;
                     this.enumbase();
@@ -5879,7 +5878,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1384;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 4 || _la === 81) {
+                if (_la === 3 || _la === 80) {
                     {
                     this.state = 1383;
                     this.attributespecifierseq(0);
@@ -5893,7 +5892,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1389;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 120) {
+                if (_la === 119) {
                     {
                     this.state = 1388;
                     this.enumbase();
@@ -5929,7 +5928,7 @@ export class CPP14Parser extends antlr.Parser {
             this.state = 1395;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if (_la === 4 || _la === 81) {
+            if (_la === 3 || _la === 80) {
                 {
                 this.state = 1394;
                 this.attributespecifierseq(0);
@@ -5941,7 +5940,7 @@ export class CPP14Parser extends antlr.Parser {
             this.state = 1399;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if (_la === 120) {
+            if (_la === 119) {
                 {
                 this.state = 1398;
                 this.enumbase();
@@ -6307,7 +6306,7 @@ export class CPP14Parser extends antlr.Parser {
             this.state = 1448;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if (_la === 38) {
+            if (_la === 37) {
                 {
                 this.state = 1447;
                 this.match(CPP14Parser.Inline);
@@ -6349,7 +6348,7 @@ export class CPP14Parser extends antlr.Parser {
             this.state = 1457;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if (_la === 38) {
+            if (_la === 37) {
                 {
                 this.state = 1456;
                 this.match(CPP14Parser.Inline);
@@ -6391,7 +6390,7 @@ export class CPP14Parser extends antlr.Parser {
             this.state = 1466;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if (_la === 38) {
+            if (_la === 37) {
                 {
                 this.state = 1465;
                 this.match(CPP14Parser.Inline);
@@ -6431,7 +6430,7 @@ export class CPP14Parser extends antlr.Parser {
             this.state = 1474;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 1494479312) !== 0) || ((((_la - 33)) & ~0x1F) === 0 && ((1 << (_la - 33)) & 2875466725) !== 0) || ((((_la - 68)) & ~0x1F) === 0 && ((1 << (_la - 68)) & 42478589) !== 0) || ((((_la - 112)) & ~0x1F) === 0 && ((1 << (_la - 112)) & 26113) !== 0)) {
+            if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 747239656) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 2875466725) !== 0) || ((((_la - 67)) & ~0x1F) === 0 && ((1 << (_la - 67)) & 42478589) !== 0) || ((((_la - 111)) & ~0x1F) === 0 && ((1 << (_la - 111)) & 26113) !== 0)) {
                 {
                 this.state = 1473;
                 this.declarationseq(0);
@@ -6556,7 +6555,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1491;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 70) {
+                if (_la === 69) {
                     {
                     this.state = 1490;
                     this.match(CPP14Parser.Typename);
@@ -6609,7 +6608,7 @@ export class CPP14Parser extends antlr.Parser {
             this.state = 1505;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if (_la === 4 || _la === 81) {
+            if (_la === 3 || _la === 80) {
                 {
                 this.state = 1504;
                 this.attributespecifierseq(0);
@@ -6700,7 +6699,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1525;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 1494479312) !== 0) || ((((_la - 33)) & ~0x1F) === 0 && ((1 << (_la - 33)) & 2875466725) !== 0) || ((((_la - 68)) & ~0x1F) === 0 && ((1 << (_la - 68)) & 42478589) !== 0) || ((((_la - 112)) & ~0x1F) === 0 && ((1 << (_la - 112)) & 26113) !== 0)) {
+                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 747239656) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 2875466725) !== 0) || ((((_la - 67)) & ~0x1F) === 0 && ((1 << (_la - 67)) & 42478589) !== 0) || ((((_la - 111)) & ~0x1F) === 0 && ((1 << (_la - 111)) & 26113) !== 0)) {
                     {
                     this.state = 1524;
                     this.declarationseq(0);
@@ -6867,7 +6866,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1556;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 125) {
+                if (_la === 124) {
                     {
                     this.state = 1555;
                     this.match(CPP14Parser.Ellipsis);
@@ -6890,7 +6889,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1564;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 125) {
+                if (_la === 124) {
                     {
                     this.state = 1563;
                     this.match(CPP14Parser.Ellipsis);
@@ -7581,7 +7580,7 @@ export class CPP14Parser extends antlr.Parser {
                         this.state = 1681;
                         this.errorHandler.sync(this);
                         _la = this.tokenStream.LA(1);
-                        if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 2203349408) !== 0) || ((((_la - 33)) & ~0x1F) === 0 && ((1 << (_la - 33)) & 1156070593) !== 0) || ((((_la - 66)) & ~0x1F) === 0 && ((1 << (_la - 66)) & 507030105) !== 0) || ((((_la - 114)) & ~0x1F) === 0 && ((1 << (_la - 114)) & 66596995) !== 0)) {
+                        if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 1101674704) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 1156070593) !== 0) || ((((_la - 65)) & ~0x1F) === 0 && ((1 << (_la - 65)) & 507030105) !== 0) || ((((_la - 113)) & ~0x1F) === 0 && ((1 << (_la - 113)) & 66596995) !== 0)) {
                             {
                             this.state = 1680;
                             this.constantexpression();
@@ -7884,7 +7883,7 @@ export class CPP14Parser extends antlr.Parser {
             {
             this.state = 1741;
             _la = this.tokenStream.LA(1);
-            if(!(_la === 16 || _la === 76)) {
+            if(!(_la === 15 || _la === 75)) {
             this.errorHandler.recoverInline(this);
             }
             else {
@@ -7915,7 +7914,7 @@ export class CPP14Parser extends antlr.Parser {
             {
             this.state = 1743;
             _la = this.tokenStream.LA(1);
-            if(!(_la === 91 || _la === 112)) {
+            if(!(_la === 90 || _la === 111)) {
             this.errorHandler.recoverInline(this);
             }
             else {
@@ -7947,7 +7946,7 @@ export class CPP14Parser extends antlr.Parser {
             this.state = 1746;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if (_la === 125) {
+            if (_la === 124) {
                 {
                 this.state = 1745;
                 this.match(CPP14Parser.Ellipsis);
@@ -8148,7 +8147,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1775;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 2203349408) !== 0) || ((((_la - 33)) & ~0x1F) === 0 && ((1 << (_la - 33)) & 1156070593) !== 0) || ((((_la - 66)) & ~0x1F) === 0 && ((1 << (_la - 66)) & 507030105) !== 0) || ((((_la - 114)) & ~0x1F) === 0 && ((1 << (_la - 114)) & 66596995) !== 0)) {
+                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 1101674704) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 1156070593) !== 0) || ((((_la - 65)) & ~0x1F) === 0 && ((1 << (_la - 65)) & 507030105) !== 0) || ((((_la - 113)) & ~0x1F) === 0 && ((1 << (_la - 113)) & 66596995) !== 0)) {
                     {
                     this.state = 1774;
                     this.constantexpression();
@@ -8219,7 +8218,7 @@ export class CPP14Parser extends antlr.Parser {
                         this.state = 1792;
                         this.errorHandler.sync(this);
                         _la = this.tokenStream.LA(1);
-                        if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 2203349408) !== 0) || ((((_la - 33)) & ~0x1F) === 0 && ((1 << (_la - 33)) & 1156070593) !== 0) || ((((_la - 66)) & ~0x1F) === 0 && ((1 << (_la - 66)) & 507030105) !== 0) || ((((_la - 114)) & ~0x1F) === 0 && ((1 << (_la - 114)) & 66596995) !== 0)) {
+                        if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 1101674704) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 1156070593) !== 0) || ((((_la - 65)) & ~0x1F) === 0 && ((1 << (_la - 65)) & 507030105) !== 0) || ((((_la - 113)) & ~0x1F) === 0 && ((1 << (_la - 113)) & 66596995) !== 0)) {
                             {
                             this.state = 1791;
                             this.constantexpression();
@@ -8369,7 +8368,7 @@ export class CPP14Parser extends antlr.Parser {
                         this.state = 1817;
                         this.errorHandler.sync(this);
                         _la = this.tokenStream.LA(1);
-                        if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 2203349408) !== 0) || ((((_la - 33)) & ~0x1F) === 0 && ((1 << (_la - 33)) & 1156070593) !== 0) || ((((_la - 66)) & ~0x1F) === 0 && ((1 << (_la - 66)) & 507030105) !== 0) || ((((_la - 114)) & ~0x1F) === 0 && ((1 << (_la - 114)) & 66596995) !== 0)) {
+                        if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 1101674704) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 1156070593) !== 0) || ((((_la - 65)) & ~0x1F) === 0 && ((1 << (_la - 65)) & 507030105) !== 0) || ((((_la - 113)) & ~0x1F) === 0 && ((1 << (_la - 113)) & 66596995) !== 0)) {
                             {
                             this.state = 1816;
                             this.constantexpression();
@@ -8426,7 +8425,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1829;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 1494479248) !== 0) || ((((_la - 33)) & ~0x1F) === 0 && ((1 << (_la - 33)) & 2305032677) !== 0) || ((((_la - 68)) & ~0x1F) === 0 && ((1 << (_la - 68)) & 9181) !== 0) || _la === 121 || _la === 126) {
+                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 747239624) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 2305032677) !== 0) || ((((_la - 67)) & ~0x1F) === 0 && ((1 << (_la - 67)) & 9181) !== 0) || _la === 120 || _la === 125) {
                     {
                     this.state = 1828;
                     this.parameterdeclarationlist(0);
@@ -8436,7 +8435,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1832;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 125) {
+                if (_la === 124) {
                     {
                     this.state = 1831;
                     this.match(CPP14Parser.Ellipsis);
@@ -8551,7 +8550,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1852;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 4 || _la === 81) {
+                if (_la === 3 || _la === 80) {
                     {
                     this.state = 1851;
                     this.attributespecifierseq(0);
@@ -8570,7 +8569,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1858;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 4 || _la === 81) {
+                if (_la === 3 || _la === 80) {
                     {
                     this.state = 1857;
                     this.attributespecifierseq(0);
@@ -8593,7 +8592,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1866;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 4 || _la === 81) {
+                if (_la === 3 || _la === 80) {
                     {
                     this.state = 1865;
                     this.attributespecifierseq(0);
@@ -8620,7 +8619,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1873;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 4 || _la === 81) {
+                if (_la === 3 || _la === 80) {
                     {
                     this.state = 1872;
                     this.attributespecifierseq(0);
@@ -8632,7 +8631,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1877;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 20 || ((((_la - 79)) & ~0x1F) === 0 && ((1 << (_la - 79)) & 4357) !== 0) || ((((_la - 112)) & ~0x1F) === 0 && ((1 << (_la - 112)) & 25089) !== 0)) {
+                if (_la === 19 || ((((_la - 78)) & ~0x1F) === 0 && ((1 << (_la - 78)) & 4357) !== 0) || ((((_la - 111)) & ~0x1F) === 0 && ((1 << (_la - 111)) & 25089) !== 0)) {
                     {
                     this.state = 1876;
                     this.abstractdeclarator();
@@ -8670,7 +8669,7 @@ export class CPP14Parser extends antlr.Parser {
             this.state = 1885;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if (_la === 4 || _la === 81) {
+            if (_la === 3 || _la === 80) {
                 {
                 this.state = 1884;
                 this.attributespecifierseq(0);
@@ -8692,7 +8691,7 @@ export class CPP14Parser extends antlr.Parser {
             this.state = 1892;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if (_la === 32 || _la === 47) {
+            if (_la === 31 || _la === 46) {
                 {
                 this.state = 1891;
                 this.virtspecifierseq(0);
@@ -8730,7 +8729,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1897;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 120) {
+                if (_la === 119) {
                     {
                     this.state = 1896;
                     this.ctorinitializer();
@@ -9062,7 +9061,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1944;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 116) {
+                if (_la === 115) {
                     {
                     this.state = 1943;
                     this.match(CPP14Parser.Comma);
@@ -9147,7 +9146,7 @@ export class CPP14Parser extends antlr.Parser {
             this.state = 1959;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 1494479248) !== 0) || ((((_la - 33)) & ~0x1F) === 0 && ((1 << (_la - 33)) & 2875695589) !== 0) || ((((_la - 68)) & ~0x1F) === 0 && ((1 << (_la - 68)) & 42478589) !== 0) || ((((_la - 112)) & ~0x1F) === 0 && ((1 << (_la - 112)) & 26369) !== 0)) {
+            if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 747239624) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 2875695589) !== 0) || ((((_la - 67)) & ~0x1F) === 0 && ((1 << (_la - 67)) & 42478589) !== 0) || ((((_la - 111)) & ~0x1F) === 0 && ((1 << (_la - 111)) & 26369) !== 0)) {
                 {
                 this.state = 1958;
                 this.memberspecification();
@@ -9187,7 +9186,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1965;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 4 || _la === 81) {
+                if (_la === 3 || _la === 80) {
                     {
                     this.state = 1964;
                     this.attributespecifierseq(0);
@@ -9199,7 +9198,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1969;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 32) {
+                if (_la === 31) {
                     {
                     this.state = 1968;
                     this.classvirtspecifier();
@@ -9209,7 +9208,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1972;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 120) {
+                if (_la === 119) {
                     {
                     this.state = 1971;
                     this.baseclause();
@@ -9226,7 +9225,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1976;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 4 || _la === 81) {
+                if (_la === 3 || _la === 80) {
                     {
                     this.state = 1975;
                     this.attributespecifierseq(0);
@@ -9236,7 +9235,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1979;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 120) {
+                if (_la === 119) {
                     {
                     this.state = 1978;
                     this.baseclause();
@@ -9325,7 +9324,7 @@ export class CPP14Parser extends antlr.Parser {
             {
             this.state = 1990;
             _la = this.tokenStream.LA(1);
-            if(!(_la === 15 || _la === 60 || _la === 71)) {
+            if(!(_la === 14 || _la === 59 || _la === 70)) {
             this.errorHandler.recoverInline(this);
             }
             else {
@@ -9411,7 +9410,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1994;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 1494479248) !== 0) || ((((_la - 33)) & ~0x1F) === 0 && ((1 << (_la - 33)) & 2875695589) !== 0) || ((((_la - 68)) & ~0x1F) === 0 && ((1 << (_la - 68)) & 42478589) !== 0) || ((((_la - 112)) & ~0x1F) === 0 && ((1 << (_la - 112)) & 26369) !== 0)) {
+                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 747239624) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 2875695589) !== 0) || ((((_la - 67)) & ~0x1F) === 0 && ((1 << (_la - 67)) & 42478589) !== 0) || ((((_la - 111)) & ~0x1F) === 0 && ((1 << (_la - 111)) & 26369) !== 0)) {
                     {
                     this.state = 1993;
                     this.memberspecification();
@@ -9432,7 +9431,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 1999;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 1494479248) !== 0) || ((((_la - 33)) & ~0x1F) === 0 && ((1 << (_la - 33)) & 2875695589) !== 0) || ((((_la - 68)) & ~0x1F) === 0 && ((1 << (_la - 68)) & 42478589) !== 0) || ((((_la - 112)) & ~0x1F) === 0 && ((1 << (_la - 112)) & 26369) !== 0)) {
+                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 747239624) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 2875695589) !== 0) || ((((_la - 67)) & ~0x1F) === 0 && ((1 << (_la - 67)) & 42478589) !== 0) || ((((_la - 111)) & ~0x1F) === 0 && ((1 << (_la - 111)) & 26369) !== 0)) {
                     {
                     this.state = 1998;
                     this.memberspecification();
@@ -9492,7 +9491,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 2010;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 4 || _la === 20 || _la === 46 || ((((_la - 79)) & ~0x1F) === 0 && ((1 << (_la - 79)) & 20741) !== 0) || ((((_la - 112)) & ~0x1F) === 0 && ((1 << (_la - 112)) & 25345) !== 0)) {
+                if (_la === 3 || _la === 19 || _la === 45 || ((((_la - 78)) & ~0x1F) === 0 && ((1 << (_la - 78)) & 20741) !== 0) || ((((_la - 111)) & ~0x1F) === 0 && ((1 << (_la - 111)) & 25345) !== 0)) {
                     {
                     this.state = 2009;
                     this.memberdeclaratorlist(0);
@@ -9674,7 +9673,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 2041;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 126) {
+                if (_la === 125) {
                     {
                     this.state = 2040;
                     this.match(CPP14Parser.Identifier);
@@ -9684,7 +9683,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 2044;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 4 || _la === 81) {
+                if (_la === 3 || _la === 80) {
                     {
                     this.state = 2043;
                     this.attributespecifierseq(0);
@@ -9785,7 +9784,7 @@ export class CPP14Parser extends antlr.Parser {
             {
             this.state = 2060;
             _la = this.tokenStream.LA(1);
-            if(!(_la === 32 || _la === 47)) {
+            if(!(_la === 31 || _la === 46)) {
             this.errorHandler.recoverInline(this);
             }
             else {
@@ -9932,7 +9931,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 2082;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 4 || _la === 81) {
+                if (_la === 3 || _la === 80) {
                     {
                     this.state = 2081;
                     this.attributespecifierseq(0);
@@ -9949,7 +9948,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 2086;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 4 || _la === 81) {
+                if (_la === 3 || _la === 80) {
                     {
                     this.state = 2085;
                     this.attributespecifierseq(0);
@@ -9961,7 +9960,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 2090;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (((((_la - 48)) & ~0x1F) === 0 && ((1 << (_la - 48)) & 7) !== 0)) {
+                if (((((_la - 47)) & ~0x1F) === 0 && ((1 << (_la - 47)) & 7) !== 0)) {
                     {
                     this.state = 2089;
                     this.accessspecifier();
@@ -9978,7 +9977,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 2094;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 4 || _la === 81) {
+                if (_la === 3 || _la === 80) {
                     {
                     this.state = 2093;
                     this.attributespecifierseq(0);
@@ -9990,7 +9989,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 2098;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 74) {
+                if (_la === 73) {
                     {
                     this.state = 2097;
                     this.match(CPP14Parser.Virtual);
@@ -10094,7 +10093,7 @@ export class CPP14Parser extends antlr.Parser {
             {
             this.state = 2113;
             _la = this.tokenStream.LA(1);
-            if(!(((((_la - 48)) & ~0x1F) === 0 && ((1 << (_la - 48)) & 7) !== 0))) {
+            if(!(((((_la - 47)) & ~0x1F) === 0 && ((1 << (_la - 47)) & 7) !== 0))) {
             this.errorHandler.recoverInline(this);
             }
             else {
@@ -10248,7 +10247,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 2131;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 125) {
+                if (_la === 124) {
                     {
                     this.state = 2130;
                     this.match(CPP14Parser.Ellipsis);
@@ -10265,7 +10264,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 2135;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 125) {
+                if (_la === 124) {
                     {
                     this.state = 2134;
                     this.match(CPP14Parser.Ellipsis);
@@ -10311,7 +10310,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 2145;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 2203349408) !== 0) || ((((_la - 33)) & ~0x1F) === 0 && ((1 << (_la - 33)) & 1156070593) !== 0) || ((((_la - 65)) & ~0x1F) === 0 && ((1 << (_la - 65)) & 1014322355) !== 0) || ((((_la - 114)) & ~0x1F) === 0 && ((1 << (_la - 114)) & 66596995) !== 0)) {
+                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 1101674704) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 1156070593) !== 0) || ((((_la - 64)) & ~0x1F) === 0 && ((1 << (_la - 64)) & 1014322355) !== 0) || ((((_la - 113)) & ~0x1F) === 0 && ((1 << (_la - 113)) & 66596995) !== 0)) {
                     {
                     this.state = 2144;
                     this.expressionlist();
@@ -10625,7 +10624,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 2198;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 126) {
+                if (_la === 125) {
                     {
                     this.state = 2197;
                     this.match(CPP14Parser.Identifier);
@@ -10673,7 +10672,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 2211;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 126) {
+                if (_la === 125) {
                     {
                     this.state = 2210;
                     this.match(CPP14Parser.Identifier);
@@ -10737,7 +10736,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 2232;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 126) {
+                if (_la === 125) {
                     {
                     this.state = 2231;
                     this.match(CPP14Parser.Identifier);
@@ -10779,7 +10778,7 @@ export class CPP14Parser extends antlr.Parser {
             this.state = 2242;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 2337665440) !== 0) || ((((_la - 33)) & ~0x1F) === 0 && ((1 << (_la - 33)) & 1290288321) !== 0) || ((((_la - 66)) & ~0x1F) === 0 && ((1 << (_la - 66)) & 507031161) !== 0) || ((((_la - 114)) & ~0x1F) === 0 && ((1 << (_la - 114)) & 66596995) !== 0)) {
+            if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 1168832720) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 1290288321) !== 0) || ((((_la - 65)) & ~0x1F) === 0 && ((1 << (_la - 65)) & 507031161) !== 0) || ((((_la - 113)) & ~0x1F) === 0 && ((1 << (_la - 113)) & 66596995) !== 0)) {
                 {
                 this.state = 2241;
                 this.templateargumentlist(0);
@@ -10828,7 +10827,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 2250;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 2337665440) !== 0) || ((((_la - 33)) & ~0x1F) === 0 && ((1 << (_la - 33)) & 1290288321) !== 0) || ((((_la - 66)) & ~0x1F) === 0 && ((1 << (_la - 66)) & 507031161) !== 0) || ((((_la - 114)) & ~0x1F) === 0 && ((1 << (_la - 114)) & 66596995) !== 0)) {
+                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 1168832720) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 1290288321) !== 0) || ((((_la - 65)) & ~0x1F) === 0 && ((1 << (_la - 65)) & 507031161) !== 0) || ((((_la - 113)) & ~0x1F) === 0 && ((1 << (_la - 113)) & 66596995) !== 0)) {
                     {
                     this.state = 2249;
                     this.templateargumentlist(0);
@@ -10849,7 +10848,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 2257;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 2337665440) !== 0) || ((((_la - 33)) & ~0x1F) === 0 && ((1 << (_la - 33)) & 1290288321) !== 0) || ((((_la - 66)) & ~0x1F) === 0 && ((1 << (_la - 66)) & 507031161) !== 0) || ((((_la - 114)) & ~0x1F) === 0 && ((1 << (_la - 114)) & 66596995) !== 0)) {
+                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 1168832720) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 1290288321) !== 0) || ((((_la - 65)) & ~0x1F) === 0 && ((1 << (_la - 65)) & 507031161) !== 0) || ((((_la - 113)) & ~0x1F) === 0 && ((1 << (_la - 113)) & 66596995) !== 0)) {
                     {
                     this.state = 2256;
                     this.templateargumentlist(0);
@@ -11056,7 +11055,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 2293;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 62) {
+                if (_la === 61) {
                     {
                     this.state = 2292;
                     this.match(CPP14Parser.Template);
@@ -11092,7 +11091,7 @@ export class CPP14Parser extends antlr.Parser {
             this.state = 2300;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if (_la === 30) {
+            if (_la === 29) {
                 {
                 this.state = 2299;
                 this.match(CPP14Parser.Extern);
@@ -11186,7 +11185,7 @@ export class CPP14Parser extends antlr.Parser {
             this.state = 2316;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if (_la === 120) {
+            if (_la === 119) {
                 {
                 this.state = 2315;
                 this.ctorinitializer();
@@ -11290,7 +11289,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 2332;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 4 || _la === 81) {
+                if (_la === 3 || _la === 80) {
                     {
                     this.state = 2331;
                     this.attributespecifierseq(0);
@@ -11309,7 +11308,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 2338;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 4 || _la === 81) {
+                if (_la === 3 || _la === 80) {
                     {
                     this.state = 2337;
                     this.attributespecifierseq(0);
@@ -11321,7 +11320,7 @@ export class CPP14Parser extends antlr.Parser {
                 this.state = 2342;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 20 || ((((_la - 79)) & ~0x1F) === 0 && ((1 << (_la - 79)) & 4357) !== 0) || ((((_la - 112)) & ~0x1F) === 0 && ((1 << (_la - 112)) & 25089) !== 0)) {
+                if (_la === 19 || ((((_la - 78)) & ~0x1F) === 0 && ((1 << (_la - 78)) & 4357) !== 0) || ((((_la - 111)) & ~0x1F) === 0 && ((1 << (_la - 111)) & 25089) !== 0)) {
                     {
                     this.state = 2341;
                     this.abstractdeclarator();
@@ -11437,7 +11436,7 @@ export class CPP14Parser extends antlr.Parser {
             this.state = 2358;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 152170880) !== 0) || ((((_la - 33)) & ~0x1F) === 0 && ((1 << (_la - 33)) & 140509377) !== 0) || ((((_la - 70)) & ~0x1F) === 0 && ((1 << (_la - 70)) & 231) !== 0) || _la === 121 || _la === 126) {
+            if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 76085440) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 140509377) !== 0) || ((((_la - 69)) & ~0x1F) === 0 && ((1 << (_la - 69)) & 231) !== 0) || _la === 120 || _la === 125) {
                 {
                 this.state = 2357;
                 this.typeidlist(0);
@@ -12055,7 +12054,7 @@ export class CPP14Parser extends antlr.Parser {
             {
             this.state = 2452;
             _la = this.tokenStream.LA(1);
-            if(!(_la === 31 || _la === 66)) {
+            if(!(_la === 30 || _la === 65)) {
             this.errorHandler.recoverInline(this);
             }
             else {
@@ -12109,7 +12108,7 @@ export class CPP14Parser extends antlr.Parser {
             {
             this.state = 2456;
             _la = this.tokenStream.LA(1);
-            if(!(((((_la - 136)) & ~0x1F) === 0 && ((1 << (_la - 136)) & 15) !== 0))) {
+            if(!(((((_la - 135)) & ~0x1F) === 0 && ((1 << (_la - 135)) & 15) !== 0))) {
             this.errorHandler.recoverInline(this);
             }
             else {
