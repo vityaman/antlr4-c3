@@ -24,6 +24,13 @@ TEST(YQLParser, CandidatesAfterSelect) {
 
   CodeCompletionCore completion(&pipeline.parser);
 
+  completion.debugOptions = {
+      .showResult = true,
+      .showDebugOutput = true,
+      .showTransitions = true,
+      .showRuleStack = true,
+  };
+
   const auto& vocabulary = pipeline.lexer.getVocabulary();
   for (size_t type = 1; type <= vocabulary.getMaxTokenType(); ++type) {
     if (YQLGrammar::Lexer::ABORT <= type && type <= YQLGrammar::Lexer::XOR) {
