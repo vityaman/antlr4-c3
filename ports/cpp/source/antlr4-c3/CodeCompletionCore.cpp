@@ -299,7 +299,7 @@ std::vector<size_t> CodeCompletionCore::getFollowingTokens(const antlr4::atn::Tr
  * @returns Follow sets.
  */
 CodeCompletionCore::FollowSetsHolder CodeCompletionCore::determineFollowSets(
-    antlr4::atn::ATNState* start, antlr4::atn::ATNState* stop
+    antlr4::atn::RuleStartState* start, antlr4::atn::ATNState* stop
 ) {
   std::vector<FollowSetWithPath> sets = {};
   std::vector<antlr4::atn::ATNState*> stateStack = {};
@@ -313,6 +313,13 @@ CodeCompletionCore::FollowSetsHolder CodeCompletionCore::determineFollowSets(
   for (const auto& set : sets) {
     combined.addAll(set.intervals);
   }
+
+  std::cout << "collectFollowSets [" << start->stateNumber;
+  std::cout << " " << atnStateTypeMap[static_cast<size_t>(start->getStateType())];
+  std::cout << " " << (*ruleNames)[start->ruleIndex];
+  std::cout << "].size = ";
+  std::cout << combined.size();
+  std::cout << "\n";
 
   return {
       .sets = sets,
@@ -405,8 +412,16 @@ bool CodeCompletionCore::collectFollowSets(  // NOLINT
             .following = getFollowingTokens(transition),
         });
       }
+
+      if (label.contains(static_cast<size_t>(49))) {
+        std::cout << "Found token 49! Path:" << "\n";
+        for (auto* state : stateStack) {
+          std::cout << " - " << state->toString() << "\n";
+        }
+      }
     }
   }
+
   stateStack.pop_back();
 
   return isExhaustive;
@@ -852,11 +867,13 @@ void CodeCompletionCore::printOverallResults() {
       sortedTokens.emplace(value);
     }
 
-    std::cout << "\n\nCollected tokens:\n" << "\n";
+    std::cout << "\n\nCollected tokens:\n"
+              << "\n";
     for (const std::string& symbol : sortedTokens) {
       std::cout << symbol << "\n";
     }
-    std::cout << "\n\n" << "\n";
+    std::cout << "\n\n"
+              << "\n";
   }
 }
 

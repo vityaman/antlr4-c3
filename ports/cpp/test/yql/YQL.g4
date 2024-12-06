@@ -537,7 +537,21 @@ type_name_callable
     ;
 
 type_name_composite
-    : (type_name_optional | type_name_tuple | type_name_struct | type_name_variant | type_name_list | type_name_stream | type_name_flow | type_name_dict | type_name_set | type_name_enum | type_name_resource | type_name_tagged | type_name_callable) QUESTION*
+    : (
+        type_name_optional | 
+        type_name_tuple | 
+        type_name_struct | 
+        type_name_variant | 
+        type_name_list | 
+        type_name_stream | 
+        type_name_flow | 
+        type_name_dict | 
+        type_name_set | 
+        type_name_enum | 
+        type_name_resource | 
+        type_name_tagged | 
+        type_name_callable
+    ) QUESTION*
     ;
 
 type_name

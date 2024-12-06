@@ -39,10 +39,47 @@ TEST(YQLParser, CandidatesAfterSelect) {
     completion.ignoredTokens.emplace(type);
   }
 
+  completion.preferredRules = {
+      YQLGrammar::Parser::RuleKeyword,
+      YQLGrammar::Parser::RuleKeyword_expr_uncompat,
+      YQLGrammar::Parser::RuleKeyword_table_uncompat,
+      YQLGrammar::Parser::RuleKeyword_select_uncompat,
+      YQLGrammar::Parser::RuleKeyword_alter_uncompat,
+      YQLGrammar::Parser::RuleKeyword_in_uncompat,
+      YQLGrammar::Parser::RuleKeyword_window_uncompat,
+      YQLGrammar::Parser::RuleKeyword_hint_uncompat,
+      YQLGrammar::Parser::RuleKeyword_as_compat,
+      YQLGrammar::Parser::RuleKeyword_compat,
+  };
+
   pipeline.tokens.fill();
 
+  size_t filteredCandidatesSize = 0;
   auto candidates = completion.collectCandidates(1);
-  EXPECT_THAT(candidates.tokens.size(), 281);
+
+  for (const auto& [token, following] : candidates.tokens) {
+    const auto isFound = [&](auto ruleIndex) {  //
+      const auto& rules = candidates.rules[token].ruleList;
+      return std::ranges::find(rules, ruleIndex) != std::end(rules);
+    };
+
+    if (isFound(YQLGrammar::Parser::RuleKeyword) &&
+        isFound(YQLGrammar::Parser::RuleKeyword_expr_uncompat) &&
+        isFound(YQLGrammar::Parser::RuleKeyword_table_uncompat) &&
+        isFound(YQLGrammar::Parser::RuleKeyword_select_uncompat) &&
+        isFound(YQLGrammar::Parser::RuleKeyword_alter_uncompat) &&
+        isFound(YQLGrammar::Parser::RuleKeyword_in_uncompat) &&
+        isFound(YQLGrammar::Parser::RuleKeyword_window_uncompat) &&
+        isFound(YQLGrammar::Parser::RuleKeyword_hint_uncompat) &&
+        isFound(YQLGrammar::Parser::RuleKeyword_as_compat) &&
+        isFound(YQLGrammar::Parser::RuleKeyword_compat)) {
+      continue;
+    }
+
+    filteredCandidatesSize += 1;
+  }
+
+  EXPECT_THAT(filteredCandidatesSize, 30);
 }
 
 }  // namespace c3::test
