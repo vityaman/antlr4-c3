@@ -15,7 +15,6 @@ class antlr4_c3TestConan(ConanFile):
         self.requires("antlr4/4.13.1")
 
     def build(self):
-
         cmake = CMake(self)
         cmake.configure()
         cmake.build()

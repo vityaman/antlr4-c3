@@ -8,19 +8,16 @@ class antlr4_c3Recipe(ConanFile):
     version = "3.0.0"
     package_type = "library"
 
-    # Optional metadata
-    license = "<Put the package license here>"
-    author = "<Put your name here> <And your email here>"
-    url = "<Package recipe repository url here, for issues about the package>"
-    description = "<Description of antlr4-c3 package here>"
-    topics = ("<Put some tag here>", "<here>", "<and here>")
+    license = "MIT"
+    author = "Mike Lischke mike@lischke-online.de"
+    url = "https://github.com/mike-lischke/antlr4-c3/tree/main/ports/cpp"
+    description = "This is a port of the antlr4-c3 library to C++"
+    topics = "antlr",
 
-    # Binary configuration
     settings = "os", "compiler", "build_type", "arch"
     options = {"shared": [True, False], "fPIC": [True, False]}
     default_options = {"shared": False, "fPIC": True}
 
-    # Sources are located in the same place as this recipe, copy them to the recipe
     exports_sources = "CMakeLists.txt", "src/*", "include/*"
 
     def validate(self):

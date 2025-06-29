@@ -452,7 +452,8 @@ CodeCompletionCore::RuleEndStatus CodeCompletionCore::processRule(  // NOLINT
   std::unordered_map<size_t, RuleEndStatus>& positionMap = shortcutMap[startState->ruleIndex];
   if (positionMap.contains(tokenListIndex)) {
     if (debugOptions.showDebugOutput) {
-      std::cout << "=====> shortcut" << "\n";
+      std::cout << "=====> shortcut"
+                << "\n";
     }
     return positionMap[tokenListIndex];
   }
@@ -813,7 +814,8 @@ void CodeCompletionCore::printDescription(
 
 void CodeCompletionCore::printRuleState(RuleWithStartTokenList const& stack) {
   if (stack.empty()) {
-    std::cout << "<empty stack>" << "\n";
+    std::cout << "<empty stack>"
+              << "\n";
     return;
   }
 
@@ -850,11 +852,13 @@ void CodeCompletionCore::printOverallResults() {
       sortedTokens.emplace(value);
     }
 
-    std::cout << "\n\nCollected tokens:\n" << "\n";
+    std::cout << "\n\nCollected tokens:\n"
+              << "\n";
     for (const std::string& symbol : sortedTokens) {
       std::cout << symbol << "\n";
     }
-    std::cout << "\n\n" << "\n";
+    std::cout << "\n\n"
+              << "\n";
   }
 }
 
