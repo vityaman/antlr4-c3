@@ -1,5 +1,6 @@
 from conan import ConanFile
 from conan.tools.cmake import CMakeToolchain, CMake, cmake_layout, CMakeDeps
+from conan.tools.build import check_min_cppstd
 
 
 class antlr4_c3Recipe(ConanFile):
@@ -21,6 +22,13 @@ class antlr4_c3Recipe(ConanFile):
 
     # Sources are located in the same place as this recipe, copy them to the recipe
     exports_sources = "CMakeLists.txt", "src/*", "include/*"
+
+    def validate(self):
+        check_min_cppstd(self, "20")
+
+    def requirements(self):
+        self.requires("antlr4/4.13.1")
+        self.requires("antlr4-cppruntime/4.13.1")
 
     def config_options(self):
         if self.settings.os == "Windows":
