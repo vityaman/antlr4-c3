@@ -7,3 +7,4 @@ CMakeUserPresets.json
 
 # Clangd
 .cache
+compile_commands.json
