@@ -1,24 +1,13 @@
-cmake_minimum_required(VERSION 3.7)
-project(antlr4-c3 VERSION 2.0.0)
+cmake_minimum_required(VERSION 3.15)
+project(antlr4-c3 CXX)
 
-option(ANTLR4C3_DEVELOPER "Enable ${PROJECT_NAME} developer mode" OFF)
 
-list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 
-include(cmake/CompileOptions.cmake)
-include(cmake/Sanitize.cmake)
 
-set(ANTLR4_TAG 4.13.1)
+add_library(antlr4-c3 src/antlr4-c3.cpp)
+target_include_directories(antlr4-c3 PUBLIC include)
 
-find_package(Antlr4Cpp REQUIRED)
 
-add_subdirectory(source)
 
-if (ANTLR4C3_DEVELOPER)
-    include(cmake/Testing.cmake)
-
-    find_package(Antlr4Tool REQUIRED)
-    find_package(GTest REQUIRED)
-
-    add_subdirectory(test)
-endif()
+set_target_properties(antlr4-c3 PROPERTIES PUBLIC_HEADER "include/antlr4-c3.h")
+install(TARGETS antlr4-c3)
